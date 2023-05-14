@@ -24,14 +24,35 @@ Please note that specific endpoint details and request/response formats would be
 <br>
 <h2>Endpoints</h2>
 <br>
-<p>1. Get Current match</p>
-<br>
-<b> Endpoint '/match' </b>
+<h5>1. Get match</h5>
+<b> Endpoint: '/match' </b>
 <br>
 <b> Method: GET </b>
 <br>
 <p><b>Description:</b> Retrieves the match information for a specified season and matchId </p>
+<h5>Parameters:</h5>
 <br>
-<b>Parameters:</b>
-<br>
-<p></p>
+<p>
+<ul>
+<li><b>'seasonId'</b>: (required): Season ID</li>
+<li><b>'sortKey'</b>: (required): Match ID</li>
+</ul>
+</p>
+<h5>Example Request: </h5>
+<p> GET /match?seasonId=season-1&sortKey=match-1 </p>
+<h5>Example Response: </h5>
+<p> {
+    "seasonId": "season-1",
+    "result": {
+        "goalsLocal": "3",
+        "localTeam": "Atletico de Madrid",
+        "matchDate": "11/05/2023",
+        "visitTeam": "Villareal",
+        "pointsLocal": "3",
+        "goalsVisit": "2",
+        "pointsVisit": "0"
+    },
+    "result.localTeam": "Barcelona",
+    "localTeam": "Maraton",
+    "sortKey": "match-1"
+} </p>
