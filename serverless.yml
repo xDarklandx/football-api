@@ -1,0 +1,48 @@
+service: football-league-api
+frameworkVersion: ">=1.0.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python3.10
+  region: us-east-2
+
+functions:
+  api:
+    handler: handler.lamdba_function
+    events:
+      - http:
+          path: /health
+          method: get
+      - http:
+          path: /matches
+          method: get
+      - http:
+          path: /match
+          method: get
+      - http:
+          path: /match
+          method: post
+      - http:
+          path: /match
+          method: patch
+      - http:
+          path: /match
+          method: delete
+      - http:
+          path: /season
+          method: get
+      - http:
+          path: /champion
+          method: get
+      - http:
+          path: /champion
+          method: post
+      - http:
+          path: /champion
+          method: patch
+      - http:
+          path: /champion
+          method: delete
+      - http:
+          path: /champions
+          method: get
