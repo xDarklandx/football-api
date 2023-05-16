@@ -8,7 +8,7 @@ provider:
 
 functions:
   api:
-    handler: handler.lamdba_function
+    handler: lamdba_function.lambda_handler
     events:
       - http:
           path: /health
